@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  title: MyString
-  details: MyText
+question_one:
+  id: 1
+  title: What makes the sky blue?
+  details: The filtering in the atmosphere.
 
-two:
-  title: MyString
-  details: MyText
+question_two:
+  id: 2
+  title: One plus one?
+  details: Two
