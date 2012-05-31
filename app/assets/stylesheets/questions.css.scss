@@ -1,0 +1,18 @@
+// Place all the styles related to the Questions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+
+.answer {
+  margin: 15px 0;
+  border-bottom: 1px solid #ccc;
+  border-height: 1px;
+}
+
+.answer:last-child {
+  border:none;
+}
+
+div.can-you-answer {
+  margin-top: 15px;
+}

@@ -1,0 +1,31 @@
+<% content_for :questions do %>
+  <h4><%= link_to "Back to Questions", root_path %></h4>
+  <h3><%= @question.title %></h3>
+  <p><%= @question.details %></p>
+  <p><strong><%= pluralize(@question.answers.count, "Answer") %></strong></p>
+  <hr>
+  <div class="previous-answers">
+    <% @question.answers.each do |ans| %>
+      <div class="answer">
+        <p><%= ans.answer %></p>
+        <p><%= ans.created_at.strftime("%b %d, %Y") %></p>
+      </div>
+    <% end %>
+  </div>
+  <div class="can-you-answer">
+    <%= form_for @question.answers.build do |f| %>
+      <%= f.text_area :answer, :class => "span8", :rows => 5, :placeholder => "Write your answer..." %><br />
+      <%= f.hidden_field :question_id, :value => @question.id %>
+      <%= f.submit "Answer", :class => "btn btn-primary" %>
+    <% end %>
+  </div>
+<% end %>
+
+<% content_for :sidebar do %>
+  <ul>
+    <li class="votes">40 votes</li>
+    <li class="views">150 views</li>
+    <li class="created_on"><%= @question.created_at.strftime("%b %d, %Y") %></li>
+    <li class="tags">Customer, Accounts</li>
+  </ul>
+<% end %>

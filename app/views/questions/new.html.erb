@@ -1,0 +1,16 @@
+<% content_for :questions do %>
+  <h2>New question</h2>
+  <%= form_for @question do |f| %>
+    <%= f.label :title, "Question Title" %>
+    <%= f.text_field :title %><br>
+    <%= f.label :details, "Question Details" %>
+    <%= f.text_area :details, :class => "span8", :rows => 5 %><br>
+    <%= f.submit "Add question", :class => "btn btn-primary" %> or <%= link_to "cancel", root_url %>
+  <% end %>
+<% end %>
+
+<% content_for :sidebar do %>
+  <h4>Tips</h4>
+  <p>Format your title like a question.</p>
+  <p>Provide as much detail as possible.</p>
+<% end %>

@@ -1,0 +1,36 @@
+<% content_for :questions do %>
+  <h2>Questions</h2>
+  <% @questions.each do |question| %>
+    <%= link_to question_path(question) do %>
+      <h4><strong><%= question.title %></strong></h4>
+      <p><%= question.details %></p>
+    <% end %>
+    <div class="question-meta">
+      <ul>
+        <li class="likes">20 likes.</li>
+        <li class="answers"><%= question.answers.count %> answers.</li>
+      </ul>
+    </div>
+  <% end %>
+<% end %>
+
+<% content_for :sidebar do %>
+  <div class="ask-question">
+    <%= link_to "Ask Question", new_question_path, :class => "btn btn-primary" %>
+  </div>
+  <div class="question-tags">
+    <ul>
+      <li><%= link_to "Subscriptions (5)", "#" %></li>
+      <li><%= link_to "Customers (3)", "#" %></li>
+      <li><%= link_to "Accounts (10)", "#" %></li>
+      <li><%= link_to "Payments (8)", "#" %></li>
+    </ul>
+  </div>
+<% end %>
+
+<% content_for :search do %>
+  <%= form_tag "search" do %>
+    <%= text_field_tag "search" %>
+    <%= submit_tag "search" %>
+  <% end %>
+<% end %>
