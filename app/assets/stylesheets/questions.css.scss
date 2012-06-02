@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap";
+ul, li {
+  margin: 0;
+  padding: 0;
+}
 
 .answer {
   margin: 15px 0;
@@ -15,4 +19,32 @@
 
 div.can-you-answer {
   margin-top: 15px;
+}
+
+div.question {
+  width: 100%;
+  clear: both;
+}
+
+div.question-meta {
+  float: left;
+  background-color: #d4d4d4;
+  margin-bottom: 15px;
+}
+
+div.question-meta ul {
+  padding: 6px;
+}
+
+div.question-meta ul li {
+  margin-right: 15px;
+  display: inline;
+}
+
+div.question-meta ul li:last-child {
+  margin-right: 0px;
+}
+
+i {
+  padding-right: 10px;
 }

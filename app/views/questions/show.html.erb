@@ -1,5 +1,9 @@
 <% content_for :questions do %>
   <h4><%= link_to "Back to Questions", root_path %></h4>
+  <ul>
+    <li><%= link_to "Thumbs Up", "#" %></li>
+    <li><%= link_to "Thumbs Down", "#" %></li>
+  </ul>
   <h3><%= @question.title %></h3>
   <p><%= @question.details %></p>
   <p><strong><%= pluralize(@question.answers.count, "Answer") %></strong></p>
