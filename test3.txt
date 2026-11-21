@@ -1,6 +1,0 @@
-Testing ** This is a document with a test secret in it.  This is only a test.
-
-Please don't ever do this, IRL.
-
-AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
-AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
